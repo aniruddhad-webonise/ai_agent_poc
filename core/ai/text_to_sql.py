@@ -2,8 +2,8 @@ import logging
 import re
 from typing import Dict, Any, Tuple, Optional
 
-from langchain.chains import LLMChain
-from langchain_openai import OpenAI
+from langchain.prompts import PromptTemplate
+from langchain_openai import ChatOpenAI
 import openai
 
 from config.settings import OPENAI_API_KEY, OPENAI_MODEL, OPENAI_TEMPERATURE, OPENAI_MAX_TOKENS
@@ -25,24 +25,17 @@ class TextToSQLService:
         self.temperature = OPENAI_TEMPERATURE
         self.max_tokens = OPENAI_MAX_TOKENS
         
-        # Create LLM instances
-        self.llm = OpenAI(
+        # Create modern LLM instance
+        self.llm = ChatOpenAI(
             api_key=self.api_key,
-            model_name=self.model_name,
+            model=self.model_name,
             temperature=self.temperature,
             max_tokens=self.max_tokens
         )
         
-        # Create chains
-        self.text_to_sql_chain = LLMChain(
-            llm=self.llm,
-            prompt=text_to_sql_prompt
-        )
-        
-        self.sql_validation_chain = LLMChain(
-            llm=self.llm,
-            prompt=sql_validation_prompt
-        )
+        # Create modern runnable chains
+        self.text_to_sql_chain = text_to_sql_prompt | self.llm
+        self.sql_validation_chain = sql_validation_prompt | self.llm
         
         # Get schema for context
         self.schema_text = schema_loader.get_schema_for_llm()
@@ -63,14 +56,17 @@ class TextToSQLService:
             # Log the incoming question
             logger.info(f"Generating SQL for question: {question}")
             
-            # Generate SQL
-            response = self.text_to_sql_chain.run(
-                schema=self.schema_text,
-                question=question
-            )
+            # Generate SQL using modern invoke pattern
+            response = self.text_to_sql_chain.invoke({
+                "schema": self.schema_text,
+                "question": question
+            })
+            
+            # Extract content from the response object
+            response_text = response.content
             
             # Clean up the response and extract SQL from markdown code blocks if present
-            sql_query = self._extract_sql_from_response(response)
+            sql_query = self._extract_sql_from_response(response_text)
             
             # Add schema prefixes to tables
             sql_query = self._add_schema_prefixes(sql_query)
@@ -139,6 +135,13 @@ class TextToSQLService:
         # Create a modified SQL query
         modified_sql = sql
         
+        # List of PostgreSQL functions and keywords that should not have schema prefixes
+        pg_functions = [
+            'current_date', 'current_time', 'current_timestamp', 'now', 'today', 
+            'extract', 'date_part', 'to_char', 'to_date', 'to_timestamp',
+            'sum', 'avg', 'min', 'max', 'count', 'coalesce', 'nullif'
+        ]
+        
         # Extract all potential table names from the query
         # Pattern to find table names after FROM and JOIN
         table_pattern = r'\b(FROM|JOIN)\s+([a-zA-Z0-9_\.]+)'
@@ -153,6 +156,10 @@ class TextToSQLService:
                 
             # Skip if it's a common SQL keyword
             if table_ref.lower() in ['select', 'where', 'group', 'order', 'having', 'limit']:
+                continue
+                
+            # Skip if it's a PostgreSQL function
+            if table_ref.lower() in pg_functions:
                 continue
                 
             # Handle the case where there might be another schema prefix
@@ -174,6 +181,15 @@ class TextToSQLService:
             replacement = f"{match.group(1)} {qualified_name}"
             modified_sql = re.sub(replace_pattern, replacement, modified_sql, flags=re.IGNORECASE)
             logger.info(f"Added schema prefix to table: {table_ref} -> {qualified_name}")
+        
+        # Remove schema prefixes from PostgreSQL functions (like CURRENT_DATE)
+        for func in pg_functions:
+            # Find instances where a function has been given a schema prefix
+            func_pattern = f'affinity_gaming\\.{func}\\b'
+            if re.search(func_pattern, modified_sql, re.IGNORECASE):
+                # Remove the schema prefix from the function
+                modified_sql = re.sub(func_pattern, func, modified_sql, flags=re.IGNORECASE)
+                logger.info(f"Removed schema prefix from PostgreSQL function: affinity_gaming.{func} -> {func}")
         
         # Log if changes were made
         if modified_sql != sql:
@@ -205,15 +221,18 @@ class TextToSQLService:
             if ";" in sql_query and not sql_query.endswith(";") and sql_query.count(";") > 1:
                 return False, sql_query, f"Potential SQL injection detected: multiple statements in query"
             
-            # Use LLM to validate and improve SQL
-            response = self.sql_validation_chain.run(
-                question=question,
-                sql_query=sql_query,
-                schema=self.schema_text
-            )
+            # Use modern invoke pattern for validation
+            response = self.sql_validation_chain.invoke({
+                "question": question,
+                "sql_query": sql_query,
+                "schema": self.schema_text
+            })
+            
+            # Extract content from the response object
+            validated_text = response.content
             
             # Extract SQL from response if it's in a code block
-            validated_sql = self._extract_sql_from_response(response)
+            validated_sql = self._extract_sql_from_response(validated_text)
             
             # Apply schema prefixes again to the validated SQL
             validated_sql = self._add_schema_prefixes(validated_sql)

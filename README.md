@@ -85,6 +85,3 @@ print(f"Results: {results['results']}")
 - `utils/` - Utility functions
 - `schema_data/` - Database schema information
 
-## License
-
-MIT

@@ -27,10 +27,7 @@ For example, use 'affinity_gaming.affinity_gaming_profit_and_loss' NOT just 'aff
 ### SQL Query:
 """
 
-text_to_sql_prompt = PromptTemplate(
-    input_variables=["schema", "question"],
-    template=TEXT_TO_SQL_TEMPLATE
-)
+text_to_sql_prompt = PromptTemplate.from_template(TEXT_TO_SQL_TEMPLATE)
 
 # Template for SQL validation
 SQL_VALIDATION_TEMPLATE = """
@@ -61,10 +58,7 @@ For example, use 'affinity_gaming.affinity_gaming_profit_and_loss' NOT just 'aff
 If the query cannot be fixed or is completely inappropriate, return NULL.
 """
 
-sql_validation_prompt = PromptTemplate(
-    input_variables=["question", "sql_query", "schema"],
-    template=SQL_VALIDATION_TEMPLATE
-)
+sql_validation_prompt = PromptTemplate.from_template(SQL_VALIDATION_TEMPLATE)
 
 # Template for SQL result explanation
 SQL_EXPLANATION_TEMPLATE = """
@@ -87,7 +81,4 @@ If the results don't fully answer the question, explain why and what information
 ### Response:
 """
 
-sql_explanation_prompt = PromptTemplate(
-    input_variables=["question", "sql_query", "results"],
-    template=SQL_EXPLANATION_TEMPLATE
-) 
+sql_explanation_prompt = PromptTemplate.from_template(SQL_EXPLANATION_TEMPLATE) 
