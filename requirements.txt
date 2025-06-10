@@ -9,9 +9,11 @@ psycopg2-binary>=2.9.0
 pymongo>=4.0.0
 
 # AI/LLM
-langchain>=0.0.348
+langchain>=0.1.17
 langchain-openai>=0.0.5
+langgraph>=0.0.25  # State management for LLM apps
 openai>=1.0.0
+typing-extensions>=4.0.0
 
 # Utils
 python-jose>=3.0.0
