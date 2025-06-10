@@ -1,0 +1,19 @@
+# Core dependencies
+fastapi>=0.95.0
+uvicorn>=0.22.0
+pydantic>=1.10.0,<2.0.0
+python-dotenv>=1.0.0
+
+# Database
+psycopg2-binary>=2.9.0
+pymongo>=4.0.0
+
+# AI/LLM
+langchain>=0.0.348
+langchain-openai>=0.0.5
+openai>=1.0.0
+
+# Utils
+python-jose>=3.0.0
+tenacity>=8.0.0
+structlog>=23.0.0 

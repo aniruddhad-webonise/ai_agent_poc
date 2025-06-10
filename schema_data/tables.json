@@ -1,0 +1,1392 @@
+{
+  "affinity_gaming_13_week_cashflow": {
+    "description": "",
+    "columns": {
+      "date": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "wtd": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "location_id": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "category_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_id": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "type": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_balance_sheet": {
+    "description": "",
+    "columns": {
+      "period": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "location_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "category_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "subcategory_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "submetric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "sub_subgroup": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "subgroup_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "ending_balance": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "source": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_cash_flow": {
+    "description": "",
+    "columns": {
+      "source": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "period": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "location_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "category_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "subcategory_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "submetric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "mtd": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "ytd": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "ttm": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_entity_config_data": {
+    "description": "",
+    "columns": {
+      "entity_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "source_entity_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "country_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "company_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_entity_period_config_data": {
+    "description": "",
+    "columns": {
+      "entity_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "period_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "period": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_period_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "company_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_gl_config_data": {
+    "description": "",
+    "columns": {
+      "actindx": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "loc": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "loc_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_net_working_capital": {
+    "description": "",
+    "columns": {
+      "source": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "period": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "location_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "category_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "subcategory_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "submetric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "ending_balance": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_period_config_data": {
+    "description": "",
+    "columns": {
+      "period_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "period": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "company_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_profit_and_loss": {
+    "description": "",
+    "columns": {
+      "source": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "period": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "location_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "ending_balance": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "actual_mtd": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "actual_ytd": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "actual_ttm": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "py_ending_balance": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "py_actual_mtd": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "py_actual_ytd": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "py_actual_ttm": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_profit_and_loss_staged": {
+    "description": "",
+    "columns": {
+      "period": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "location_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "category_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "category_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "source": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "debit": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "credit": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "beginning_balance": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "period_balance": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "ending_balance": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_report_config_data": {
+    "description": "",
+    "columns": {
+      "report_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "report_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "category_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "category_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "subcategory_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "subcategory_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "sub_subgroup_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "sub_subgroup": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "signage": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "absolute_flag": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "company_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_revenue_wtd": {
+    "description": "",
+    "columns": {
+      "type": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "audit_date": {
+        "data_type": "date",
+        "nullable": true,
+        "description": ""
+      },
+      "period_end_date": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "loc_id": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "location_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "location_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "day": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "end_of_week": {
+        "data_type": "date",
+        "nullable": true,
+        "description": ""
+      },
+      "category": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "submetric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "wtd_value": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "mtd_value": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "ytd_value": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "wtd_value_prev_year": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "mtd_value_prev_year": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "ytd_value_prev_year": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "affinity_gaming_thirteen_week_cash_flow": {
+    "description": "",
+    "columns": {
+      "date": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "wtd": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "year": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_code": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "location_id": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "category_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_name": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "gl_number": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "entity_id": {
+        "data_type": "bigint",
+        "nullable": true,
+        "description": ""
+      },
+      "type": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "source": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "alembic_version": {
+    "description": "",
+    "columns": {
+      "version_num": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      }
+    }
+  },
+  "cap_structure": {
+    "description": "",
+    "columns": {
+      "id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "type": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "maturity": {
+        "data_type": "date",
+        "nullable": true,
+        "description": ""
+      },
+      "rate": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "third_party": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "total": {
+        "data_type": "double precision",
+        "nullable": false,
+        "description": ""
+      },
+      "parent_company_amount": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "created_at": {
+        "data_type": "date",
+        "nullable": false,
+        "description": ""
+      },
+      "updated_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "tranche": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "date": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "month_name": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "deleted_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "five_year_plans": {
+    "description": "",
+    "columns": {
+      "id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "projected_year": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "revenue": {
+        "data_type": "double precision",
+        "nullable": false,
+        "description": ""
+      },
+      "ebitda": {
+        "data_type": "double precision",
+        "nullable": false,
+        "description": ""
+      },
+      "created_at": {
+        "data_type": "date",
+        "nullable": false,
+        "description": ""
+      },
+      "updated_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "date": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "deleted_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "headcount": {
+    "description": "",
+    "columns": {
+      "id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "department": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "employees": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "payroll_total": {
+        "data_type": "double precision",
+        "nullable": false,
+        "description": ""
+      },
+      "created_date": {
+        "data_type": "date",
+        "nullable": false,
+        "description": ""
+      },
+      "created_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": false,
+        "description": ""
+      },
+      "updated_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "deleted_at": {
+        "data_type": "date",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "public_equities": {
+    "description": "",
+    "columns": {
+      "id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "year": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "month": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "month_name": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "day": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "date": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "metric": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "comparison_company": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "value": {
+        "data_type": "double precision",
+        "nullable": false,
+        "description": ""
+      },
+      "created_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": false,
+        "description": ""
+      },
+      "updated_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "quarter": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "metric_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "deleted_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "ticker": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "ticker_order": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "rent_roll": {
+    "description": "",
+    "columns": {
+      "id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "company_id": {
+        "data_type": "integer",
+        "nullable": false,
+        "description": ""
+      },
+      "company_name": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "source_entity_id": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "concept": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "source_entity_name": {
+        "data_type": "character varying",
+        "nullable": false,
+        "description": ""
+      },
+      "street": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "city": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "state": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "size": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "location_type": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "lease_type": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "rent_start": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "rent_expiration": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "seat_total": {
+        "data_type": "integer",
+        "nullable": true,
+        "description": ""
+      },
+      "date": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "created_at": {
+        "data_type": "date",
+        "nullable": false,
+        "description": ""
+      },
+      "updated_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      },
+      "zip_code": {
+        "data_type": "character varying",
+        "nullable": true,
+        "description": ""
+      },
+      "rent_base": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "rent_nnn": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  },
+  "revenue_rated_play": {
+    "description": "",
+    "columns": {
+      "dtmGamingDate": {
+        "data_type": "date",
+        "nullable": true,
+        "description": ""
+      },
+      "intGamingDateID": {
+        "data_type": "bigint",
+        "nullable": false,
+        "description": ""
+      },
+      "intPropertyID": {
+        "data_type": "bigint",
+        "nullable": false,
+        "description": ""
+      },
+      "strCampus": {
+        "data_type": "text",
+        "nullable": true,
+        "description": ""
+      },
+      "RatedGrossWin": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "RatedNetWin": {
+        "data_type": "double precision",
+        "nullable": true,
+        "description": ""
+      },
+      "is_deleted": {
+        "data_type": "boolean",
+        "nullable": true,
+        "description": ""
+      },
+      "is_deleted_at": {
+        "data_type": "timestamp without time zone",
+        "nullable": true,
+        "description": ""
+      }
+    }
+  }
+}

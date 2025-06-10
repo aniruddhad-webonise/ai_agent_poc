@@ -1,0 +1,312 @@
+{
+  "affinity_gaming_target_trial_balance": {
+    "description": "",
+    "columns": {
+      "company_id": {
+        "data_type": "integer"
+      },
+      "year": {
+        "data_type": "integer"
+      },
+      "month": {
+        "data_type": "integer"
+      },
+      "period": {
+        "data_type": "text"
+      },
+      "entity_id": {
+        "data_type": "integer"
+      },
+      "entity_name": {
+        "data_type": "text"
+      },
+      "entity_code": {
+        "data_type": "text"
+      },
+      "location_id": {
+        "data_type": "integer"
+      },
+      "report_id": {
+        "data_type": "integer"
+      },
+      "report_name": {
+        "data_type": "text"
+      },
+      "category_id": {
+        "data_type": "integer"
+      },
+      "category_name": {
+        "data_type": "text"
+      },
+      "subcategory_id": {
+        "data_type": "integer"
+      },
+      "subcategory_name": {
+        "data_type": "text"
+      },
+      "sub_subgroup_id": {
+        "data_type": "integer"
+      },
+      "sub_subgroup": {
+        "data_type": "text"
+      },
+      "gl_name": {
+        "data_type": "text"
+      },
+      "gl_number": {
+        "data_type": "text"
+      },
+      "beginning_balance": {
+        "data_type": "double precision"
+      },
+      "period_balance": {
+        "data_type": "double precision"
+      },
+      "ending_balance": {
+        "data_type": "double precision"
+      },
+      "debit": {
+        "data_type": "double precision"
+      },
+      "credit": {
+        "data_type": "double precision"
+      },
+      "metric_order": {
+        "data_type": "integer"
+      },
+      "submetric_order": {
+        "data_type": "integer"
+      },
+      "subgroup_order": {
+        "data_type": "integer"
+      },
+      "source": {
+        "data_type": "text"
+      }
+    }
+  },
+  "affinity_gaming_trial_balances_cpl": {
+    "description": "",
+    "columns": {
+      "actindx": {
+        "data_type": "bigint"
+      },
+      "year": {
+        "data_type": "bigint"
+      },
+      "month": {
+        "data_type": "bigint"
+      },
+      "period": {
+        "data_type": "text"
+      },
+      "ledger_id": {
+        "data_type": "bigint"
+      },
+      "period_balance": {
+        "data_type": "double precision"
+      },
+      "debit": {
+        "data_type": "double precision"
+      },
+      "credit": {
+        "data_type": "double precision"
+      },
+      "entity_id": {
+        "data_type": "integer"
+      }
+    }
+  },
+  "affinity_gaming_trial_balances_fla": {
+    "description": "",
+    "columns": {
+      "actindx": {
+        "data_type": "bigint"
+      },
+      "year": {
+        "data_type": "bigint"
+      },
+      "month": {
+        "data_type": "bigint"
+      },
+      "period": {
+        "data_type": "text"
+      },
+      "ledger_id": {
+        "data_type": "bigint"
+      },
+      "period_balance": {
+        "data_type": "double precision"
+      },
+      "debit": {
+        "data_type": "double precision"
+      },
+      "credit": {
+        "data_type": "double precision"
+      },
+      "entity_id": {
+        "data_type": "integer"
+      }
+    }
+  },
+  "affinity_gaming_trial_balances_hgi": {
+    "description": "",
+    "columns": {
+      "actindx": {
+        "data_type": "bigint"
+      },
+      "year": {
+        "data_type": "bigint"
+      },
+      "month": {
+        "data_type": "bigint"
+      },
+      "period": {
+        "data_type": "text"
+      },
+      "ledger_id": {
+        "data_type": "bigint"
+      },
+      "period_balance": {
+        "data_type": "double precision"
+      },
+      "debit": {
+        "data_type": "double precision"
+      },
+      "credit": {
+        "data_type": "double precision"
+      },
+      "entity_id": {
+        "data_type": "integer"
+      }
+    }
+  },
+  "affinity_gaming_trial_balances_hlk": {
+    "description": "",
+    "columns": {
+      "actindx": {
+        "data_type": "bigint"
+      },
+      "year": {
+        "data_type": "bigint"
+      },
+      "month": {
+        "data_type": "bigint"
+      },
+      "period": {
+        "data_type": "text"
+      },
+      "ledger_id": {
+        "data_type": "bigint"
+      },
+      "period_balance": {
+        "data_type": "double precision"
+      },
+      "debit": {
+        "data_type": "double precision"
+      },
+      "credit": {
+        "data_type": "double precision"
+      },
+      "entity_id": {
+        "data_type": "integer"
+      }
+    }
+  },
+  "affinity_gaming_trial_balances_hmt": {
+    "description": "",
+    "columns": {
+      "actindx": {
+        "data_type": "bigint"
+      },
+      "year": {
+        "data_type": "bigint"
+      },
+      "month": {
+        "data_type": "bigint"
+      },
+      "period": {
+        "data_type": "text"
+      },
+      "ledger_id": {
+        "data_type": "bigint"
+      },
+      "period_balance": {
+        "data_type": "double precision"
+      },
+      "debit": {
+        "data_type": "double precision"
+      },
+      "credit": {
+        "data_type": "double precision"
+      },
+      "entity_id": {
+        "data_type": "integer"
+      }
+    }
+  },
+  "affinity_gaming_trial_balances_hsj": {
+    "description": "",
+    "columns": {
+      "actindx": {
+        "data_type": "bigint"
+      },
+      "year": {
+        "data_type": "bigint"
+      },
+      "month": {
+        "data_type": "bigint"
+      },
+      "period": {
+        "data_type": "text"
+      },
+      "ledger_id": {
+        "data_type": "bigint"
+      },
+      "period_balance": {
+        "data_type": "double precision"
+      },
+      "debit": {
+        "data_type": "double precision"
+      },
+      "credit": {
+        "data_type": "double precision"
+      },
+      "entity_id": {
+        "data_type": "integer"
+      }
+    }
+  },
+  "affinity_gaming_trial_balances_prm": {
+    "description": "",
+    "columns": {
+      "actindx": {
+        "data_type": "bigint"
+      },
+      "year": {
+        "data_type": "bigint"
+      },
+      "month": {
+        "data_type": "bigint"
+      },
+      "period": {
+        "data_type": "text"
+      },
+      "ledger_id": {
+        "data_type": "bigint"
+      },
+      "period_balance": {
+        "data_type": "double precision"
+      },
+      "debit": {
+        "data_type": "double precision"
+      },
+      "credit": {
+        "data_type": "double precision"
+      },
+      "entity_id": {
+        "data_type": "integer"
+      }
+    }
+  }
+}
